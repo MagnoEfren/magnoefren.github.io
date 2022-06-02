@@ -3,8 +3,7 @@
 	width: 200px;
 	margin: 20px;
 	height: 200px;
-	background: #011;
-	halign: 'center'
+	background: teal;
 	position: relative;
 	transition-property: background;
 	transition-duration: 1s;
@@ -21,13 +20,11 @@
 	background: greenyellow;
 }
 
-
-
 @keyframes desplazamiento{
 
 	0%{
 		left: 0;
-		background: #011;
+		background: teal;
 	}
 
 	50%{
@@ -37,7 +34,7 @@
 
 	100%{
 		left: 80%;
-		background: #011;
+		background: purple;
 
 	}
 }
