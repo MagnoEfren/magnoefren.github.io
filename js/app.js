@@ -1,18 +1,18 @@
 function saludar()
 	{
-		let saludo = prompt('COMO ESTAS?')
+		let saludo = prompt('BIENVENIDO, COMO ESTAS?')
 
-		if (saludo=='BIEN'){
+		if (saludo=='BIEN') or (saludo == 'bien){
 			document.write('ME ALEGRO')
 		}
 		else
 		{
-			document.write('	una pena')
+			document.write('UNA PENA')
 		}
 	}
 
 
-//saludar()
+saludar()
 
 //let dato = document.getElementsByTagName('dato')
 //alert(dato)
