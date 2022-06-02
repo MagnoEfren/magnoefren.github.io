@@ -12,7 +12,7 @@ function saludar()
 	}
 
 
-saludar()
+//saludar()
 
 //let dato = document.getElementsByTagName('dato')
 //alert(dato)
