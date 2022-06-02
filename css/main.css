@@ -1,0 +1,42 @@
+
+body{
+	color: white;
+	background:#000000;
+}
+
+
+.caja {
+	width: 250px;
+	text-align: center;
+	height: 250px;
+	background: teal;
+	font-size: 35px;
+	position: relative;
+	transition-property: background;
+	transition-duration: 3s;
+	transition-timing-function: cubic-bezier(0.0, 0.0, 1.0, 1.0);
+	animation-name: desplazamiento;
+	animation-duration: 3s;
+	animation-iteration-count: 3;
+	animation-direction: alternate;
+	animation-fill-mode: forwards;
+}
+
+
+.caja:hover {
+	background: greenyellow;
+}
+
+@keyframes desplazamiento{
+
+	0%{
+		left: 0;
+		background: teal;
+	}
+
+	100%{
+		left: 80%;
+		background: purple;
+
+	}
+}
