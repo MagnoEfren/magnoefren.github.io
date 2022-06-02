@@ -3,7 +3,8 @@
 	width: 200px;
 	margin: 20px;
 	height: 200px;
-	background: darkred;
+	background: cian;
+	halign: 'center'
 	position: relative;
 	transition-property: background;
 	transition-duration: 1s;
@@ -26,7 +27,7 @@
 
 	0%{
 		left: 0;
-		background: blue;
+		background: #011;
 	}
 
 	50%{
@@ -36,7 +37,7 @@
 
 	100%{
 		left: 80%;
-		background: red;
+		background: #011;
 
 	}
 }
