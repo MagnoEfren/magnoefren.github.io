@@ -1,4 +1,11 @@
 
+body{
+	background: black
+	color: white
+
+}
+
+
 .caja1 {
 	width: 200px;
 	margin: 20px;
