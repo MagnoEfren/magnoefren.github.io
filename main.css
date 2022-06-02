@@ -1,0 +1,156 @@
+/*
+
+h1 {
+	padding:10px;
+	display: inline-block;
+	background: red;
+	height: 200px;
+	width: 200px;
+	text-align: center;
+	margin: 10px 20px;
+	border-radius: 30px;
+	border: 4px groove blue;
+	line-height: 40px;
+
+	box-shadow: 0px 5px 5px 10px #000;
+	text-shadow: 5px 0px 5px #0f0;
+	transform: rotate(45deg);
+	transform: rotate3d(5, 10, 1,40deg);
+
+
+}
+
+
+h1 {
+	display: block;
+	margin: 5px;
+	position:absolute;
+}
+
+div h1{
+	height: 50px;
+	width: 100px;
+	background: magenta;
+}
+
+.contenedor {
+	background: black;
+	margin: 50px auto;
+	height: 400px;
+	width: 400px;
+	position: relative;
+
+}
+
+.caja1{
+	left: 0;
+
+}
+
+.caja2{
+	right: 0;
+
+}
+
+.caja3{
+	bottom: 0;
+	left: 0;
+
+}
+
+
+.caja4{
+	bottom: 0;
+	right: 0;
+
+
+}
+
+.caja5{
+	right: 0;
+	bottom: 0;
+	left: 0;
+	top: 0;
+	margin: auto;
+
+
+}
+
+
+
+
+.caja1{
+	background: yellow;
+	width: 180px;
+	height: 180px;
+	border: 2px solid red;
+	margin: 5px;
+	transition: all 1s;
+
+}
+
+.caja1:focus {
+	background: blueviolet;
+	width: 180px;
+	height: 180px;
+	border: 2px solid red;
+	margin: 5px;
+
+}
+
+.caja3{
+	color: red;
+	background: black;
+	transition: all 1s;
+
+}
+
+
+.caja3:hover {
+	color: blue;
+	background: red;
+}
+
+*/
+
+.caja1 {
+	width: 200px;
+	margin: 20px;
+	height: 200px;
+	background: darkred;
+	position: relative;
+	transition-property: background;
+	transition-duration: 1s;
+	transition-timing-function: cubic-bezier(0.0, 0.0, 1.0, 1.0);
+	animation-name: desplazamiento;
+	animation-duration: 2s;
+	animation-iteration-count: 3;
+	animation-direction: alternate;
+	animation-fill-mode: forwards;
+}
+
+
+.caja1:hover {
+	background: greenyellow;
+}
+
+
+
+@keyframes desplazamiento{
+
+	0%{
+		left: 0;
+		background: blue;
+	}
+
+	50%{
+
+		background: lightyellow;
+	}
+
+	100%{
+		left: 80%;
+		background: red;
+
+	}
+}
