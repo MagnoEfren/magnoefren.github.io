@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Tangerine&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Tangerine&display=swap');
 
 body{
 	color: white;
 	background:#000000;
+	font-family: 'Kdam Thmor Pro', sans-serif;
 }
 
 
@@ -25,6 +28,7 @@ body{
 
 .caja:hover {
 	background: greenyellow;
+	font-family: 'Tangerine', cursive;
 }
 
 @keyframes desplazamiento{
