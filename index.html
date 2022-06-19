@@ -2,20 +2,204 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 	<title> Magno Efren </title>
+
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+
+	<!-- adding a icon -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 	<!-- adding a favicon -->
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
 	
-
 </head>
 
 <body>
-<div class = 'caja'>PAGINA EN DESARROLLO</div>
-<script src="js/app.js"></script>
+	<!-- SECCION INICIO-->
+	<section id="inicio">
+		<div class="contenido">
+			<header>
+				<div class="contenido-header">
+					<li class="inicio-dos"><a href= "#inicio">ME</a></li>
+					<nav id="nav" class="">
+						<ul id = "links">
+							<li> <a href= "#inicio" class="seleccionado" onclick="seleccionar(this)">INICIO</a></li>
+							<li> <a href= "#sobremi" onclick="seleccionar(this)">SEBRE MI</a></li>
+							<li> <a href= "#portfolio" onclick="seleccionar(this)">PORTFOLIO</a></li>
+							<li> <a href= "#servicios" onclick="seleccionar(this)">SERVICIOS</a></li>
+							<li> <a href= "#contacto" onclick="seleccionar(this)">CONTACTO</a></li>
+						</ul>
+
+					</nav>
+					<!-- Button para cambiar estilo-->
+					<button class="switch" id="bdark">
+						<a class="moon"><i class="fa-solid fa-moon"></i></a>
+						<a class="sun"><i class="fa-solid fa-sun"></i></a>
+					</button>
+					<!-- Iconos del menu  responsive-->
+					<div id="icon-nav" onclick="responsiveMenu()">
+						<i class="fa-solid fa-bars"></i>
+					</div>
+					
+					<!-- Iconos social media-->
+					<div class = "redes">
+						<a href="https://www.youtube.com/c/MagnoEfren/videos" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+						<a href="https://www.instagram.com/magnoefren/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+						<a href="https://github.com/MagnoEfren" target="_blank"><i class="fa-brands fa-github"></i></a>
+						<a href="#"><i class="fa-brands fa-linkedin" target="_blank"></i></a>
+					</div>
+					
+				</div>
+			</header>
+
+			<div class="presentacion">
+				<p class="bienvenida">BIENVENIDOS </p>
+				<h2> I'am Magno Efren</h2>
+				<p class="descripcion">Programación, Inteligencia Artificial y Electronica </p>
+				<a href="#portfolio">Ir a Portafolio</a>
+			</div>
+			
+		</div>
+	</section>
+	<!-- SECCION SOBRE MI -->
+	<section id="sobremi">
+		<div class="contenedor-foto">
+			<img src="images/foto.jpg">
+		</div>
+		<div class="sobremi"> 
+			<p class="titulo-seccion">Sobre Mi</p>
+			<p>Hola soy Magno Efren <br /> <br />
+				Estoy interesado en la creación de aplicaciones de escritorio, web y movil, la codificación de videojuegos y la enseñanza /
+			 	tutoría (¡tanto de codificación como de no codificación!). </p>
+
+			<a href="#"> DESCARGAR CV</a>
+
+		</div>		
+	</section>
+	<!-- SECCION PORTAFOLIO -->
+	<section id="portfolio">
+		<h3 class="titulo-seccion">MIS PROYECTOS</h3>
+		<div class="fila">
+			<div class="proyecto">
+				<div class="overlay"></div>
+				<img src="images/proyecto1.png">
+				<div class="info">
+					<h4>Aplicacion de escritorio</h4>
+					<p>Aplicacion de Escritorio en Python con Pyqt5-CRUD</p>					
+				</div>
+			</div>
+
+			<div class="proyecto">
+				<div class="overlay"></div>
+				<img src="images/proyecto2.png">
+				<div class="info">
+					<h4>Aplicacion para graficar datos</h4>
+					<p>Desarrollado en python, nos permite graficar multiples datos de sensores usando arduino</p>					
+				</div>
+			</div>
+
+			<div class="proyecto">
+				<div class="overlay"></div>
+				<img src="images/proyecto3.png">
+				<div class="info">
+					<h4>Aplicacion Android</h4>
+					<p>Realizada en python con Kivy nos permite graficar datos</p>					
+				</div>
+			</div>
+
+		</div>
+	</section>
+	<!-- SECCION SOBRE MI -->
+	<section id="servicios">
+		<h3 class="titulo-seccion"> MIS SERVICIOS</h3>
+		<div class="fila">
+			<div class="servicio">
+				<span class="icon"><i class="fa-solid fa-laptop"></i></span>
+				<h4>Diseño de Aplicaciones de Escritorio</h4>
+				<hr>
+				<ul class="servicios-tag">
+					<li>Python</li>
+					<li>Qt</li>
+					<li>Tkinter</li>
+				</ul>
+				<p>Desarrollo de aplicaciones de escritorio en Python con PyQt5, PySide2, Tkinter, Kivy </p>
+			</div>
+
+			<div class="servicio">
+				<span class="icon"><i class="fa-solid fa-mobile-screen"></i></span>
+				<h4>Diseño de Aplicaciones Moviles</h4>
+				<hr>
+				<ul class="servicios-tag">
+					<li>Python</li>
+					<li>Kivy</li>
+					<li>KivyMD</li>
+				</ul>
+				<p>Desarrollo de aplicaciones moviles en python con Kivy y KivyMD</p>
+			</div>
+
+			<div class="servicio">
+				<span class="icon"><i class="fa-solid fa-microchip"></i></span>
+				<h4>Proyectos de Internet de las Cosas</h4>
+				<hr>
+				<ul class="servicios-tag">
+					<li>Arduino</li>
+					<li>PIC</li>
+					<li>Python</li>
+				</ul>
+				<p>Desarrollo de proyectos de Internet de las cosas</p>
+			</div>
+
+			<div class="servicio">
+				<span class="icon"><i class="fa-solid fa-code"></i></span>
+				<h4>Librerias de Python</h4>
+				<hr>
+				<ul class="servicios-tag">
+					<li>IA</li>
+					<li>GUI</li>
+					<li>DATA SCIENCE</li>
+				</ul>
+				<p>Trabajo con Matplotlib, Numpy, Pandas para analisis de datos</p>
+			</div>			
+		</div>
+	</section>
+	<!--SECCION DE CONTACTO-->
+	<section id="contacto">
+		<h3 class="titulo-seccion">Contacto</h3>
+		<div class="contenedor-form">
+			<form action="">
+				<div class="fila-mitad">
+					<input type="text" placeholder="Nombre completo" class="input-mitad">
+					<input type="text" placeholder="Dirección Email" class="input-mitad">
+				</div>
+				<div class="fila">
+					<input type="text" placeholder="Tema..." class="input-full">
+				</div>
+				<div class="fila">
+					<textarea name="" id="" cols="30" rows="10" placeholder="Tu mensaje..." class="input-full"></textarea>
+				</div>
+				<input  type="submit" value="Enviar Mensaje" class="btn-enviar">
+
+			</form>
+			
+		</div>
+	</section>
+	<!--SECCION FOOTER-->
+	<footer>
+		<p>© Copyright 2022 Magno Efren - Todos los derechos Reservados</p>
+		<!-- Iconos social media-->
+		<div class = "redes">
+			<a href="https://www.youtube.com/c/MagnoEfren/videos" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+			<a href="https://www.instagram.com/magnoefren/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+			<a href="https://github.com/MagnoEfren" target="_blank"><i class="fa-brands fa-github"></i></a>
+			<a href="#"><i class="fa-brands fa-linkedin" target="_blank"></i></a>
+		</div>
+	</footer>
+
+	<script src="js/app.js"></script>
 
 </body>
 	
