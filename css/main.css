@@ -1,14 +1,17 @@
-/* agregamos la fuente: font-family: 'Tangerine', cursive; */ 
+/* 
+Youtube: Magno Efren
+https://www.youtube.com/c/MagnoEfren/videos
+
+*/ 
 
 @import url('https://fonts.googleapis.com/css2?family=Tangerine&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Tangerine&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Press+Start+2P&family=Tangerine&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Nunito:wght@200&family=Press+Start+2P&display=swap');
 
 /* 
 font-family: 'Tangerine', cursive;  
-font-family: 'Kdam Thmor Pro', sans-serif;
 font-family: 'Press Start 2P', cursive;
-  
+font-family: 'Nunito', sans-serif;
 */ 
 
 
@@ -16,8 +19,7 @@ font-family: 'Press Start 2P', cursive;
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: 'Kdam Thmor Pro', sans-serif;
-
+	font-family: 'Nunito', sans-serif;
 }
 
 body{
@@ -33,17 +35,16 @@ html{
 	background-size: cover;
 	background-position: center center;
 	height: 100vh;
-
+	width:  100%;
 }
 
 #inicio .contenido header {
-	background-color: rgba(0, 0, 0, .8);
+	background-color: rgba(0, 0, 0, .5);
 	position: fixed;
 	width: 100%;
 	z-index: 100;
 	top: 0;
 }
-
 
 #inicio .contenido header .contenido-header{
 	max-width: 1100px;
@@ -52,7 +53,6 @@ html{
 	justify-content: space-between;
 	align-items: center;
 	padding: 10px 10px;
-
 }
 
 #inicio .contenido header .contenido-header .inicio-dos {
@@ -68,28 +68,28 @@ html{
 	font-size: 25px;
 }
 
-
 #inicio .contenido header .contenido-header nav ul{
 	list-style: none;
 	display: flex;
 	align-items: center;
 }
 
-
 #inicio .contenido header .contenido-header nav ul li a{
 	text-decoration: none;
-	color: #fff;
+	color: #000;
 	margin: 0 5px;
 	font-weight: 400;
+	font-weight: bolder;
 	transition: 0.5s;
-	border: 2px solid #000;
+	border: 2px solid #008080;
 	border-radius: 10px;
 	margin: 10px;
 	padding: 5px 15px;
+	background-color: #fff;
 }
 
 #inicio .contenido header .contenido-header nav ul a:hover{
-	border: 2px solid #fff;
+	border: 2px solid #008080;
 	border-radius: 10px;
 	color: #008080;
 }
@@ -100,18 +100,15 @@ html{
 	margin-left: 5px;
 	transition: 0.5s;
 	font-size: 25px;
-	color: #fff;
-	
+	color: #fff;	
 }
 
 #inicio .contenido header .contenido-header .redes a:hover{
 	color: #008080;
-
 }
 
 #inicio .contenido header .contenido-header .seleccionado{
 	color: #008080;
-
 }
 
 #inicio .contenido .presentacion{
@@ -126,22 +123,18 @@ html{
 	color: #fff;
 }
 
-
 #inicio .contenido .presentacion .bienvenida {
 	font-size: 30px;
 	margin-top: 30px;
 	margin-bottom: 20px;
 	text-transform: uppercase;
 	letter-spacing: 5px;
-
 }
-
 
 #inicio .contenido .presentacion h2{
 	font-size: 25px;
 	margin-bottom:  25px;
 	text-align: center;
-
 }
 
 #inicio .contenido .presentacion .descripcion{
@@ -149,9 +142,7 @@ html{
 	margin-bottom:  25px;
 	text-align: center;
 	font-family: 'Tangerine', cursive; 
-
 }
-
 
 #inicio .contenido .presentacion a{
 	text-decoration: none;
@@ -170,34 +161,28 @@ html{
 	transition: 1s;
 }
 
-
 #icon-nav {
 	color: #008080;
 	display: none;
 	font-size: 25px;
 }
 
-/*CONFIGURACION DE LOS botnes dark and lick--inicio*/
+/*CONFIGURACION DE LOS BOTONES Y EL STILO DARK */
 
 #inicio .contenido header .contenido-header .switch{
 	background: transparent;
 	border: none;
-
 }
 
 #inicio .contenido header .contenido-header .switch a{
 	background-color: #008080;
-	text-decoration: none;
 	color: #fff;
 	cursor: pointer;
 	width: 30px;
 	height: 30px;
 	display: inline-block;
 	border-radius: 15px;
-	transition: 0.5s;
-	font-size: 20px;
-
-
+	font-size: 24px;
 }
 
 #inicio .contenido header .contenido-header .switch .sun{
@@ -205,23 +190,20 @@ html{
 }
 
 
-/*style dark*/
+/* style dark */
 
 body.darkmode{
 	background-color: #000;
 	color: #fff;
 	transition: 1s;
-
 }
-
 .darkmode #inicio .contenido header .contenido-header .switch .moon{
 	display: none;
 }
 
 .darkmode #inicio .contenido header .contenido-header .switch .sun{
 	display: block;
-	background-color: #aa00aa;
-	
+	background-color: #aa00aa;	
 }
 
 .darkmode #inicio {
@@ -229,7 +211,12 @@ body.darkmode{
 	background-size: cover;
 	background-position: center center;
 	height: 100vh;
-	}
+}
+.darkmode #inicio .contenido header .contenido-header nav ul li a{
+	color: #fff;
+	background-color: #000;
+	border: 2px solid #aa00aa;
+}
 
 .darkmode #inicio .contenido header .contenido-header .redes a:hover{
 	color: #aa00aa;
@@ -243,11 +230,9 @@ body.darkmode{
 	color: #aa00aa;
 }
 
-
 .darkmode #inicio .contenido header .contenido-header .inicio-dos a{
 	color: #aa00aa;
 }
-
 
 .darkmode #inicio .contenido .presentacion a:hover{
 	background-color: #aa00aa;
@@ -271,34 +256,32 @@ body.darkmode{
 	background-color: #aa00aa;
 }
 
-.darkmode #contacto .contenedor-form .btn-enviar{
-	border: 2px solid #aa00aa;
-	color: #000;
+.darkmode #contacto .contenedor-form .datos .icon{
+	color: #aa00aa;
 }
 
-.darkmode #contacto .contenedor-form .btn-enviar:hover{
-	background-color: #aa00aa;
-	color: #000;
+.darkmode #contacto .contenedor-form .datos h4{
+	color: #aa00aa;
+}
+
+.darkmode #contacto .contenedor-form .datos h4:hover{
+	color: #fff;
 }
 
 .darkmode footer{
 	background-color: #aa00aa;
 
 }
-/*CONFIGURACION DE LOS botnes dark and lick  fin*/
 
-
-
+/* FIN DE LA CONFIGURACION */
 /*#############################################################################################################################*/
-/*SECCION S O B R E MI */
-
+/*SECCION SOBREMI */
 
 #sobremi{
 	max-width: 1100px;
 	margin: auto;
 	padding: 100px 15px;
 	display: flex;
-
 }
 
 #sobremi .contenedor-foto{
@@ -321,7 +304,6 @@ body.darkmode{
 	font-size:  25px;
 	text-decoration: none;
 	text-deration-thickness 5px;
-
 }
 
 #sobremi .sobremi p{
@@ -329,7 +311,6 @@ body.darkmode{
 	line-height: 25px;
 	margin-bottom: 20px;
 }
-
 
 #sobremi .sobremi a{
 	display: inline-block;
@@ -341,7 +322,6 @@ body.darkmode{
 	color: #008080;
 	margin-top: 30px;
 	transition: .5s;
-
 }
 
 #sobremi .sobremi a:hover{
@@ -352,14 +332,14 @@ body.darkmode{
 /*#############################################################################################################################*/
 /* DISEÑO DEL PROTAFOLIO */
 
-#portfolio{
+#portafolio{
 	max-width: 1100px;
 	padding: 100px 0;
 	margin: auto;
 
 }
 
-#portfolio .titulo-seccion{
+#portafolio .titulo-seccion{
 	text-align: center;
 	font-size: 22px;
 	text-transform: uppercase;
@@ -368,13 +348,13 @@ body.darkmode{
 }
 
 
-#portfolio .fila{
+#portafolio .fila{
 	display: flex;
 	justify-content: space-between;
 	margin: 30px 0;
 }
 
-#portfolio .fila .proyecto{
+#portafolio .fila .proyecto{
 	max-width: 450px;
 	border: 2px solid #008080;
 	border-radius: 10px;
@@ -384,7 +364,7 @@ body.darkmode{
 
 }
 
-#portfolio .fila .proyecto img{
+#portafolio .fila .proyecto img{
 	max-width: 100%;
 	border-radius: 10px;
 	border: 21px solid #fff;
@@ -392,13 +372,13 @@ body.darkmode{
 	transition: .5s;
 }
 
-#portfolio .fila .proyecto:hover img{
+#portafolio .fila .proyecto:hover img{
 	border: 10px;
 	border: 2px solid #008080;
 	transition: .5s;
 }
 
-#portfolio .fila .proyecto .info{
+#portafolio .fila .proyecto .info{
 	position: absolute;
 	left: 0;
 	background-color: rgba(0, 0, 0, .4);
@@ -410,7 +390,7 @@ body.darkmode{
 	transition: .5s;
 }
 
-#portfolio .fila .proyecto .info:hover{
+#portafolio .fila .proyecto .info:hover{
 	opacity: 1;
 	bottom: 0;
 }
@@ -419,8 +399,7 @@ body.darkmode{
 
 #servicios{
 	padding: 100px 15px;
-	text-align: center;
-	
+	text-align: center;	
 }
 
 #servicios .titulo-seccion{
@@ -428,14 +407,11 @@ body.darkmode{
 	text-transform: uppercase;
 	text-decoration:none;
 }
-
-
 #servicios .fila{
 	display: flex;
 	justify-content: space-between;
 	max-width: 1100px;
 	margin: 30px auto;
-
 }
 
 #servicios .fila .servicio{
@@ -444,18 +420,15 @@ body.darkmode{
 	margin: 0 5px;
 	border-radius: 5px;
 	transition: .5s;
-
 }
 
 #servicios .fila .servicio:hover{
 	box-shadow: 8px 8px 10px #008080, -8px -8px 15px  #aa00aa;	
 }
 
-
 #servicios .fila .servicio h4{
 	font-size: 22px;
 	margin-bottom: 25px;
-
 }
 
 #servicios .fila .servicio .icon{
@@ -468,15 +441,12 @@ body.darkmode{
 	text-align: center;
 	text-decoration:none;
 	font-size: 30px;
-
 }
-
 
 #servicios .fila .servicio hr{
 	width: 30px;
 	margin: auto;
 	margin-bottom: 10px;
-
 }
 
 #servicios .fila .servicio ul{
@@ -484,24 +454,18 @@ body.darkmode{
 	display: flex;
 	justify-content: space-between;
 	margin-bottom: 10px;
-
 }
-
 
 #servicios .fila .servicio p{
 font-size: 14px;
 line-height: 20px;
 }
 
-
-
 /*#############################################################################################################################*/
-
 /*SECCION DE CONTACTO DISEÑO*/
 
 #contacto {
-	padding: 15px 15px;
-	
+	padding: 15px 15px;	
 }
 
 #contacto .titulo-seccion{
@@ -510,66 +474,39 @@ line-height: 20px;
 	font-size: 22px;
 	text-transform: uppercase;
 	text-decoration: none;
-
 }
 
 #contacto .contenedor-form{
-	max-width: 1100px;
-	margin: auto;
-}
-
-
-#contacto .contenedor-form .fila{
-	margin-bottom: 10px;
-	margin: 10px 10px;
-
-}
-
-#contacto .contenedor-form .fila-mitad{
 	display: flex;
-	padding: 10px;
 	justify-content: space-between;
+	max-width: 1100px;
+	margin: 30px auto;
 }
 
-#contacto .contenedor-form input,
-#contacto .contenedor-form textarea{
+#contacto .contenedor-form .datos{
+	max-width: 350px;
+	padding: 30px;
+	margin: 5 5px;
+	text-align: center;
+}
+
+#contacto .contenedor-form .datos .icon{
+	display: inline-block;
+	color: #008080;
 	padding: 10px;
-	border-radius: 10px;
-	border: none;
-	border: 1px solid #008080;
+	font-size: 30px;
+	margin-bottom: 5px;
 }
 
-#contacto .contenedor-form .fila-mitad .input-mitad{
-	width: 50%;
-	margin-right: 2px;
+#contacto .contenedor-form .datos h4{
+	color: #008080;
 }
 
-#contacto .contenedor-form .input-full{
-	width: 100%;
-}
-
-#contacto .contenedor-form .btn-enviar{
-	display: flex;
-	margin: auto;
-	transition: 0.5;
-	padding: 5px 5px;
-	cursor: pointer;
-	font-size: 15px;
-	font-weight: bold;
-	border: 2px solid #008080;
-	border-radius: 10px;
-	background-color: #fff;
-}
-
-#contacto .contenedor-form .btn-enviar:hover{
-	background-color: #008080;
+#contacto .contenedor-form .datos h4:hover{
 	color: #000;
-	
 }
-
 
 /*DISEÑO FOOTER*/
-
 
 footer{
 	background-color: #008080;
@@ -584,7 +521,7 @@ footer a{
 	color: #fff;
 	display: inline-block;
 	margin: 5px;
-	font-size: 26px;
+	font-size: 30px;
 	transition: .5s;
 }
 
@@ -594,7 +531,7 @@ footer a:hover{
 }
 
 
-/* SECCION  RESPONSABLE */
+/* SECCION  RESPONSIVE */
 
 @media screen and (max-width: 890px){
 	.redes{
@@ -612,63 +549,50 @@ footer a:hover{
 		top: 48px;
 		left: 0;
 		padding: 10px 0;
-
 	}
-
 	nav.responsive ul{
 		display: block !important;
 		text-align: center;
 	}
 	nav.responsive ul li{
 		margin: 5px 0;
-
 	}
-
 	#icon-nav{
 		display: block;
 		margin-top: 0px;
 	}
-
-/*Cooregir nav */
 	#inicio .contenido header .contenido-header nav ul li a{
 	display: block;
 	}
 
-
 	#inicio .contenido .presentacion h2{
 		font-size: 40px;
 	}
-
 	#sobremi{
 		padding: 50px 0;
 		display: block;
 	}
-
 	#sobremi .contenedor-foto{
 		margin: auto;
 		max-width: 200px;
-
 	}
 	#sobremi .contenedor-foto img{
 		padding: 8px;
 	}
-
 	#sobremi .sobremi .titulo-seccion{
 		text-align: center;
 	}
-
 	#sobremi .sobremi h2{
 		font-size: 25px;
 		text-align: center;
 	}
-
-	#portfolio{
+	#portafolio{
 		padding: 50px 0;
 	}
-	#portfolio .fila{
+	#portafolio .fila{
 		display: block;
 	}
-	#portfolio .fila .proyecto{
+	#portafolio .fila .proyecto{
 		margin: 10px auto;
 	}
 
@@ -678,31 +602,18 @@ footer a:hover{
 	#servicios .fila{
 		display: block;
 	}
-
 	#servicios .fila .servicio{
 		margin: 10px auto;
-
 	}
-
 	#contacto{
 		padding: 15px auto;
-
 	}
 
-	#contacto .contenedor-form .mitad{
-		margin-bottom: 15px;
+	#contacto .contenedor-form{
 		display: block;
 	}
 
-	#contacto .contenedor-form .fila-mitad .input-mitad{
-		width: 50%;
-		margin: 2px;
+	#contacto .contenedor-form .datos{
+		margin: 15px auto;
 	}
-
-	#contacto .contenedor-form .mitad input{
-		width: 100%;
-		margin: 15px;
-	}
-
-
 }
