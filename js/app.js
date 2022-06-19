@@ -1,3 +1,6 @@
+//  Youtube: Magno Efren
+//  https://www.youtube.com/c/MagnoEfren/videos
+
 // funcion que muestra el menu responsive
 function responsiveMenu(){
 	var x = document.getElementById("nav");
@@ -10,7 +13,7 @@ function responsiveMenu(){
 	}
 }
 
-// funcion que me ampli ael estil a la opcion selecionada en el menu quita la previsuacion selecionada
+// funcion para cambiar-responsive
 
 function seleccionar(link){
 	var opciones= document.querySelectorAll("#links a");
@@ -22,37 +25,31 @@ function seleccionar(link){
 	link.className ="seleccionado";
 	var x =  document.getElementById("nav");
 	x.className ="";
-
 }
 
 
-//Modo oscuro (Dark Mode)
-
-
+// Configuramos el Modo dark
 var bdark = document.querySelector("#bdark");
 var body = document.querySelector("body")
 
-load();
-
+load_data();
 
 bdark.addEventListener('click', e =>{
 	body.classList.toggle('darkmode');
-	store(body.classList.contains('darkmode'));
+	store_app(body.classList.contains('darkmode'));
 });
 
-
-
- function load(){
- 	var darkmode = localStorage.getItem('darkmode');
+function load_data(){
+	var darkmode = localStorage.getItem('darkmode');
 
  	if(!darkmode){
- 		store('false');
+ 		store_app('false');
  	}
  	else if(darkmode=='true'){
  		body.classList.add('darkmode');
  	}
  }
 
- function store(value){
+ function store_app(value){
  	localStorage.setItem('darkmode', value);
  }
