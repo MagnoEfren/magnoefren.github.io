@@ -81,16 +81,11 @@ html{
 	font-weight: 400;
 	font-weight: bolder;
 	transition: 0.5s;
-	border: 2px solid #008080;
-	border-radius: 10px;
-	margin: 10px;
 	padding: 5px 15px;
-	background-color: #fff;
+	
 }
 
 #inicio .contenido header .contenido-header nav ul a:hover{
-	border: 2px solid #008080;
-	border-radius: 10px;
 	color: #008080;
 }
 
@@ -214,8 +209,7 @@ body.darkmode{
 }
 .darkmode #inicio .contenido header .contenido-header nav ul li a{
 	color: #fff;
-	background-color: #000;
-	border: 2px solid #aa00aa;
+	
 }
 
 .darkmode #inicio .contenido header .contenido-header .redes a:hover{
@@ -332,11 +326,10 @@ body.darkmode{
 /*#############################################################################################################################*/
 /* DISEÑO DEL PROTAFOLIO */
 
-#portafolio{
-	max-width: 1100px;
-	padding: 100px 0;
-	margin: auto;
 
+#portafolio{
+	padding: 100px 15px;
+	text-align: center;	
 }
 
 #portafolio .titulo-seccion{
@@ -344,56 +337,57 @@ body.darkmode{
 	font-size: 22px;
 	text-transform: uppercase;
 	text-decoration: none;
-
 }
 
 
-#portafolio .fila{
+#portafolio .proyecto{
+	padding: 100px 15px;
+	text-align: center;	
 	display: flex;
-	justify-content: space-between;
-	margin: 30px 0;
 }
 
 #portafolio .fila .proyecto{
-	max-width: 450px;
-	border: 2px solid #008080;
-	border-radius: 10px;
-	margin: 0 10px;
-	position: relative;
-	overflow: hidden;
-
+	display: flex;
+	justify-content: space-between;
+	max-width: 1100px;
+	margin: 30px auto;
 }
 
-#portafolio .fila .proyecto img{
-	max-width: 100%;
-	border-radius: 10px;
-	border: 21px solid #fff;
-	object-fit: cover;
-	transition: .5s;
+#portafolio .proyecto .foto{
+	width: 50%;
 }
 
-#portafolio .fila .proyecto:hover img{
-	border: 10px;
-	border: 2px solid #008080;
-	transition: .5s;
-}
-
-#portafolio .fila .proyecto .info{
-	position: absolute;
-	left: 0;
-	background-color: rgba(0, 0, 0, .4);
-	color: #fff;
+#portafolio .proyecto .foto img{
 	width: 100%;
-	padding: 10px;
-	opacity: 0;
-	bottom: -40px;
-	transition: .5s;
 }
 
-#portafolio .fila .proyecto .info:hover{
+#portafolio .proyecto .informacion{
+	padding: 30px;
+	border-radius: 5px;
+	transition: .5s;
+	justify-content: center;
+	width: 100%;
+
+}
+
+#portafolio .proyecto .informacion .links a{
+	text-decoration:none;
+	color: #008080;
+	display: inline-block;
+	margin: 5px;
+	font-size: 30px;
+	transition: .5s;
+	justify-content: center;
+
+}
+
+
+#portafolio .proyecto .informacion:hover{
 	opacity: 1;
 	bottom: 0;
 }
+
+
 /*#############################################################################################################################*/
 /* SECCCION SETVICIOS */
 
@@ -589,10 +583,10 @@ footer a:hover{
 	#portafolio{
 		padding: 50px 0;
 	}
-	#portafolio .fila{
+	#portafolio .proyecto{
 		display: block;
 	}
-	#portafolio .fila .proyecto{
+	#portafolio .proyecto .informacion{
 		margin: 10px auto;
 	}
 
