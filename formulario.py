@@ -40,4 +40,6 @@ def main(page:Page):
         )
     )
 
-ft.app(target=main)
+#ft.app(target=main)
+ft.app(target=main, view=flet.WEB_BROWSER)
+
