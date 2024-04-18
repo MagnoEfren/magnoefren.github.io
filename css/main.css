@@ -31,15 +31,18 @@ html{
 }
 
 #inicio {
-	background: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url("../images/fondo.png");	
+	background: linear-gradient(rgba(0,0,0, 1), rgba(0, 0, 0, 0)), url("../images/fondo2.png");	
 	background-size: cover;
 	background-position: center center;
 	height: 100vh;
 	width:  100%;
+	height: 50%;
+
 }
 
+
 #inicio .contenido header {
-	background-color: rgba(0, 0, 0, .5);
+	background-color: rgba(255, 255, 255, 1);
 	position: fixed;
 	width: 100%;
 	z-index: 100;
@@ -74,6 +77,7 @@ html{
 	align-items: center;
 }
 
+
 #inicio .contenido header .contenido-header nav ul li a{
 	text-decoration: none;
 	color: #000;
@@ -95,7 +99,7 @@ html{
 	margin-left: 5px;
 	transition: 0.5s;
 	font-size: 25px;
-	color: #fff;	
+	color: #000;	
 }
 
 #inicio .contenido header .contenido-header .redes a:hover{
@@ -187,6 +191,17 @@ html{
 
 /* style dark */
 
+/* style dark  headerrrrrrrrrrrrr */
+.darkmode #inicio .contenido header {
+	background-color: rgba(0, 0, 0, 1);
+	position: fixed;
+	width: 100%;
+	z-index: 100;
+	top: 0;
+}
+
+
+
 body.darkmode{
 	background-color: #000;
 	color: #fff;
@@ -202,7 +217,7 @@ body.darkmode{
 }
 
 .darkmode #inicio {
-	background: linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .8)), url("../images/fondo.png");	
+	background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../images/fondo1.png");	
 	background-size: cover;
 	background-position: center center;
 	height: 100vh;
@@ -211,6 +226,11 @@ body.darkmode{
 	color: #fff;
 	
 }
+
+.darkmode #inicio .contenido header .contenido-header .redes a{
+	color: #fff;
+}
+
 
 .darkmode #inicio .contenido header .contenido-header .redes a:hover{
 	color: #aa00aa;
@@ -342,8 +362,9 @@ body.darkmode{
 
 #portafolio .proyecto{
 	padding: 100px 15px;
-	text-align: center;	
 	display: flex;
+	align-items: center;
+
 }
 
 #portafolio .fila .proyecto{
@@ -354,7 +375,8 @@ body.darkmode{
 }
 
 #portafolio .proyecto .foto{
-	width: 50%;
+	width: 100%;
+    flex: 0 0 50%; /* La foto ocupará la mitad del espacio */
 }
 
 #portafolio .proyecto .foto img{
@@ -365,19 +387,35 @@ body.darkmode{
 	padding: 30px;
 	border-radius: 5px;
 	transition: .5s;
-	justify-content: center;
+	text-align: left;
 	width: 100%;
+	border-right : 2px solid #555;
+	border-bottom:  2px solid #555;
 
 }
 
+#portafolio .proyecto .informacion h2{
+text-align: center;
+}
+
+#portafolio .proyecto .informacion .subtitulo{
+font-weight: bold;
+}
+
+#portafolio .proyecto .informacion .links{
+	text-align: center;
+
+}
+
+
 #portafolio .proyecto .informacion .links a{
 	text-decoration:none;
-	color: #008080;
+	color: #aa00aa;
 	display: inline-block;
-	margin: 5px;
+	margin: 0 5px;
 	font-size: 30px;
 	transition: .5s;
-	justify-content: center;
+	justify-content: left;
 
 }
 
@@ -385,7 +423,10 @@ body.darkmode{
 #portafolio .proyecto .informacion:hover{
 	opacity: 1;
 	bottom: 0;
+	border-bottom: 5px solid #aa00aa;
 }
+
+
 
 
 /*#############################################################################################################################*/
