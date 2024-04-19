@@ -24,6 +24,8 @@ font-family: 'Nunito', sans-serif;
 
 body{
 	transition: 1s;
+
+
 }
 
 html{
@@ -56,10 +58,12 @@ html{
 	justify-content: space-between;
 	align-items: center;
 	padding: 10px 10px;
+
 }
 
 #inicio .contenido header .contenido-header .inicio-dos {
 	list-style: none;
+
 }
 
 #inicio .contenido header .contenido-header .inicio-dos a{
@@ -266,6 +270,15 @@ body.darkmode{
 	color: #fff;
 }
 
+.darkmode #portafolio .proyecto .informacion .links a{
+	color: #aa00aa;
+}
+
+.darkmode #portafolio .proyecto .proyecto_numero:hover{
+	border-bottom: 5px solid #aa00aa;
+}
+
+
 .darkmode #servicios .fila .servicio .icon{
 	background-color: #aa00aa;
 }
@@ -294,7 +307,7 @@ body.darkmode{
 #sobremi{
 	max-width: 1100px;
 	margin: auto;
-	padding: 100px 15px;
+	padding: 50px 15px;
 	display: flex;
 }
 
@@ -303,12 +316,34 @@ body.darkmode{
 	margin-right: 80px;
 }
 
+#sobremi .contenedor-foto:hover{
+	max-width: 400px;
+	margin-right: 80px;
+	transform: scale(1.05);
+
+}
+
 #sobremi .contenedor-foto img {
 	padding: 2px;
 	width: 100%;
 	border-radius: 50%;
 	background-color: #fff;
+	animation: girar 2s infinite alternate; 
+
 }
+
+
+
+@keyframes girar {
+  0% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(10deg);
+  }
+}
+
+
 
 #sobremi .sobremi{
 	margin: 0 10px;
@@ -350,6 +385,7 @@ body.darkmode{
 #portafolio{
 	padding: 100px 15px;
 	text-align: center;	
+
 }
 
 #portafolio .titulo-seccion{
@@ -361,36 +397,53 @@ body.darkmode{
 
 
 #portafolio .proyecto{
-	padding: 100px 15px;
+	padding: 10px 10px;
 	display: flex;
 	align-items: center;
-
 }
 
-#portafolio .fila .proyecto{
-	display: flex;
-	justify-content: space-between;
-	max-width: 1100px;
-	margin: 30px auto;
-}
+
 
 #portafolio .proyecto .foto{
 	width: 100%;
     flex: 0 0 50%; /* La foto ocupará la mitad del espacio */
+
+
 }
 
 #portafolio .proyecto .foto img{
 	width: 100%;
+	border-radius: 10px;
+
+	/* MODIFICACION                                          JJJJJJJJJJJJJJJJJJ */
+  --_g: 10% /45% 45% no-repeat linear-gradient(#fff 0 0);
+  --m:
+    left   var(--_i,0%) top    var(--_g),
+    bottom var(--_i,0%) left   var(--_g),
+    top    var(--_i,0%) right  var(--_g),
+    right  var(--_i,0%) bottom var(--_g);
+  -webkit-mask: var(--m);
+          mask: var(--m);
+
+  transition: .3s linear;
+  cursor: pointer;
 }
 
+
+#portafolio .proyecto .foto:hover {
+	opacity: 1;
+	bottom: 0;
+	border-radius: 15px solid #008080;
+  --_i: 10%;
+
+}
+
+
 #portafolio .proyecto .informacion{
-	padding: 30px;
-	border-radius: 5px;
+	padding: 10px 15px;
 	transition: .5s;
 	text-align: left;
 	width: 100%;
-	border-right : 2px solid #555;
-	border-bottom:  2px solid #555;
 
 }
 
@@ -400,33 +453,42 @@ text-align: center;
 
 #portafolio .proyecto .informacion .subtitulo{
 font-weight: bold;
+padding: 5px;
 }
 
 #portafolio .proyecto .informacion .links{
 	text-align: center;
+	padding: 10px;
 
 }
 
 
 #portafolio .proyecto .informacion .links a{
 	text-decoration:none;
-	color: #aa00aa;
+	color: #008080;
 	display: inline-block;
 	margin: 0 5px;
 	font-size: 30px;
 	transition: .5s;
 	justify-content: left;
-
 }
 
 
-#portafolio .proyecto .informacion:hover{
+#portafolio .proyecto .proyecto_numero:hover{
 	opacity: 1;
 	bottom: 0;
-	border-bottom: 5px solid #aa00aa;
+	border-bottom: 5px solid #008080;
 }
 
 
+#portafolio .proyecto .proyecto_numero{	
+	display: flex; /* Utilizamos flexbox para organizar los elementos */
+	align-items: center; /* Centra verticalmente los elementos */
+	margin: 0 auto; /* Centra el contenedor horizontalmente */
+	padding: 20px; /* Espaciado interior del contenedor */
+	border: 2px solid #888; /* Borde para visualizar el contenedor */
+	border-radius : 10px;
+}
 
 
 /*#############################################################################################################################*/
@@ -578,19 +640,33 @@ footer a:hover{
 
 	nav.responsive{
 		display: block;
-		background-color: rgba(0, 0, 0, .8);
+		
+		background-color: rgba(255, 255, 255, 1);
 		width: 100%;
 		position: absolute;
 		top: 48px;
 		left: 0;
 		padding: 10px 0;
 	}
+
+	.darkmode nav.responsive{
+		display: block;
+		background-color: rgba(0, 0, 0, 255);
+		width: 100%;
+		position: absolute;
+		top: 48px;
+		left: 0;
+		padding: 10px 0;
+	}
+
+
 	nav.responsive ul{
 		display: block !important;
 		text-align: center;
 	}
 	nav.responsive ul li{
 		margin: 5px 0;
+		color: #fff;
 	}
 	#icon-nav{
 		display: block;
@@ -624,9 +700,15 @@ footer a:hover{
 	#portafolio{
 		padding: 50px 0;
 	}
+
 	#portafolio .proyecto{
 		display: block;
 	}
+
+	#portafolio .proyecto .proyecto_numero{
+		display: block;
+	}
+
 	#portafolio .proyecto .informacion{
 		margin: 10px auto;
 	}
