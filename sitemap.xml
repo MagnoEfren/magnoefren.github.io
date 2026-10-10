@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://magnoefren.github.io/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://magnoefren.github.io/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://magnoefren.github.io/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://magnoefren.github.io/"/>
+  </url>
+  <url>
+    <loc>https://magnoefren.github.io/proyectos/nodo-iiot-esp32-mqtt.html</loc>
+    <lastmod>2026-10-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://magnoefren.github.io/proyectos/nodo-iiot-esp32-mqtt.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://magnoefren.github.io/proyectos/nodo-iiot-esp32-mqtt.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://magnoefren.github.io/proyectos/nodo-iiot-esp32-mqtt.html"/>
+  </url>
+  <url>
+    <loc>https://magnoefren.github.io/proyectos/panel-variables-proceso.html</loc>
+    <lastmod>2026-10-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://magnoefren.github.io/proyectos/panel-variables-proceso.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://magnoefren.github.io/proyectos/panel-variables-proceso.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://magnoefren.github.io/proyectos/panel-variables-proceso.html"/>
+  </url>
+  <url>
+    <loc>https://magnoefren.github.io/proyectos/hmi-arduino-tkinter.html</loc>
+    <lastmod>2026-10-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://magnoefren.github.io/proyectos/hmi-arduino-tkinter.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://magnoefren.github.io/proyectos/hmi-arduino-tkinter.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://magnoefren.github.io/proyectos/hmi-arduino-tkinter.html"/>
+  </url>
+  <url>
+    <loc>https://magnoefren.github.io/proyectos/metricflow.html</loc>
+    <lastmod>2026-10-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://magnoefren.github.io/proyectos/metricflow.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://magnoefren.github.io/proyectos/metricflow.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://magnoefren.github.io/proyectos/metricflow.html"/>
+  </url>
+</urlset>
