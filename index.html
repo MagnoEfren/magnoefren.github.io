@@ -36,7 +36,6 @@ var tt=d.getAttribute("data-title-"+l);if(tt)document.title=tt;})();
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" href="assets/img/favicon-100.png">
-  
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 <link rel="preload" href="assets/fonts/Outfit-Variable.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/InstrumentSerif-Italic.woff2" as="font" type="font/woff2" crossorigin>
@@ -51,7 +50,8 @@ var tt=d.getAttribute("data-title-"+l);if(tt)document.title=tt;})();
 </head>
 <body>
 <a class="skip-link" href="#main"><span data-l="es">Saltar al contenido</span><span data-l="en" lang="en">Skip to content</span></a>
-<div class="bg" aria-hidden="true"><div class="bg__blob bg__blob--1"></div><div class="bg__blob bg__blob--2"></div><div class="bg__blob bg__blob--3"></div><div class="bg__grid"></div><div class="bg__noise"></div></div>
+<div class="bg" aria-hidden="true"><div class="bg__layer"><span class="orb orb--1"></span><span class="orb orb--2"></span><span class="orb orb--3"></span><span class="orb orb--4"></span><span class="orb orb--5"></span><span class="orb orb--6"></span><span class="orb orb--7"></span><span class="orb orb--8"></span><span class="orb orb--9"></span></div><div class="bg__noise"></div></div>
+<div class="wipe" aria-hidden="true"><span class="wipe__orb"></span></div>
 <header class="site-header">
   <nav class="nav glass" aria-label="Navegación principal" data-es-aria-label="Navegación principal" data-en-aria-label="Main navigation" data-i18n-attr="aria-label">
     <a class="brand" href="#inicio" aria-label="Ir al inicio" data-es-aria-label="Ir al inicio" data-en-aria-label="Go to home" data-i18n-attr="aria-label"><img src="assets/img/favicon-100.png" width="36" height="36" alt=""></a>
@@ -234,9 +234,7 @@ var tt=d.getAttribute("data-title-"+l);if(tt)document.title=tt;})();
 
 <div class="about">
   <aside class="profile glass rv" style="--d:0">
-  <!--   <div class="profile__avatar"><img src="assets/img/favicon-100.png" width="64" height="64" alt=""></div>  -->
     <div class="profile__avatar"><img src="assets/img/foto.jpeg" width="400" height="400" alt="Foto de Magno Efren"></div>
-    <!-- Foto opcional: reemplaza la imagen anterior por assets/img/perfil.webp (cuadrada, mín. 400×400 px). -->
     <h2>Magno Efren<span class="serif grad">Araujo Rodriguez</span></h2>
     <ul class="info">
       <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M21.4 10.9a1 1 0 0 0 0-1.8L12.8 5.2a2 2 0 0 0-1.6 0L2.6 9.1a1 1 0 0 0 0 1.8l8.6 3.9a2 2 0 0 0 1.6 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg><span data-l="es">Ingeniero Mecatrónico</span><span data-l="en" lang="en">Mechatronics Engineer</span></li>
