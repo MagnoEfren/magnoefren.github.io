@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="es" data-theme="dark" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Enlaces</title>
+<meta name="description" content="Enlaces principales: portafolio, YouTube, GitHub, LinkedIn y formas de apoyar el contenido.">
+<meta name="theme-color" content="#06090c">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Magno Efren · Enlaces">
+<meta property="og:description" content="Portafolio, YouTube, GitHub, LinkedIn y formas de apoyar el contenido.">
+<meta property="og:url" content="https://magnoefren.github.io/links/">
+<meta property="og:image" content="https://magnoefren.github.io/assets/img/og-cover.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://magnoefren.github.io/links/">
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="../assets/img/favicon-100.png">
+<link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
+<link rel="preload" href="../assets/fonts/Outfit-Variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="style.css">
+<script src="config.js"></script>
+<script>
+/* Tema antes de pintar */
+(function(){var d=document.documentElement,c=(window.LINKS_CONFIG||{}).theme||{},t=null;
+try{t=localStorage.getItem("links-theme")}catch(e){}
+if(t!=="light"&&t!=="dark"){t=c.mode==="light"||c.mode==="dark"?c.mode:(matchMedia("(prefers-color-scheme: light)").matches?"light":"dark")}
+d.setAttribute("data-theme",t);d.className="js";})();
+</script>
+</head>
+<body>
+<div class="scene" aria-hidden="true">
+  <div class="scene__img"></div>
+  <span class="blob blob--a"></span><span class="blob blob--b"></span><span class="blob blob--c"></span>
+  <div class="scene__veil"></div>
+</div>
+
+<main class="wrap" id="app">
+  <section class="profile glass" aria-labelledby="p-name">
+    <div class="avatar">
+      <span class="avatar__ring"></span>
+      <span class="avatar__orbit"><i></i></span>
+      <img id="p-avatar" src="" alt="" width="112" height="112">
+    </div>
+    <h1 class="name" id="p-name"></h1>
+    <p class="role" id="p-role"></p>
+    <p class="bio" id="p-bio"></p>
+    <p class="meta"><span id="p-loc"></span><span class="meta__sep" id="p-sep" hidden></span><span id="p-time"></span></p>
+    <div class="actions">
+      <button type="button" class="pill" id="share"></button>
+      <button type="button" class="pill pill--icon" id="theme" aria-label="Cambiar tema"></button>
+    </div>
+    <nav class="socials" id="socials" aria-label="Redes sociales"></nav>
+  </section>
+
+  <section class="stream" aria-label="Enlaces">
+    <a class="featured glass" id="featured" hidden></a>
+    <div id="groups"></div>
+    <footer class="foot"><span id="foot"></span></footer>
+  </section>
+</main>
+
+<div class="toast glass" role="status" aria-live="polite"></div>
+<noscript><p style="position:fixed;inset:auto 0 20px;text-align:center;color:#fff">Activa JavaScript para ver los enlaces.</p></noscript>
+<script src="app.js" defer></script>
+</body>
+</html>

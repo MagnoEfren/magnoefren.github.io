@@ -649,3 +649,19 @@ pre.code { margin-top: 10px; padding: 12px 14px; border-radius: 12px; border: 1p
   .social { padding: 12px 2px 10px; font-size: 10.5px; }
   .mailcard a.addr { font-size: 14.5px; }
 }
+
+/* ---------- Botón de modo de navegación (horizontal / vertical) ---------- */
+.mode-btn { display: none; position: relative; overflow: hidden; }
+@media (min-width: 1024px) and (min-height: 600px) { .mode-btn { display: inline-grid; } }
+.mode-btn .ico { transition: transform .7s cubic-bezier(.34, 1.56, .64, 1); }
+.mode-btn .ico .mid { fill: color-mix(in srgb, var(--accent) 35%, transparent); stroke: var(--accent); transition: fill .4s, stroke .4s; }
+html.mode-v .mode-btn .ico { transform: rotate(90deg); }
+.mode-btn::after { content: ""; position: absolute; inset: 0; border-radius: inherit; background: radial-gradient(circle, color-mix(in srgb, var(--accent) 35%, transparent), transparent 70%); opacity: 0; transform: scale(.3); transition: opacity .5s, transform .6s var(--ease); pointer-events: none; }
+.mode-btn.is-pulse::after { opacity: 1; transform: scale(1.4); transition: none; }
+.mode-btn:hover .ico .mid { fill: color-mix(in srgb, var(--accent) 60%, transparent); }
+
+/* Modo vertical en PC: cada sección ocupa una pantalla y se recorre hacia abajo */
+@media (min-width: 1024px) and (min-height: 600px) {
+  html.mode-v .panel { min-height: 100svh; display: flex; align-items: center; padding: calc(var(--nav-h) + 40px) var(--gutter) 56px; }
+  html.mode-v .panel + .panel { border-top: 1px solid var(--line); }
+}

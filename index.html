@@ -12,7 +12,8 @@ if(!l){l=((navigator.languages&&navigator.languages[0])||navigator.language||"es
 l=l==="en"?"en":"es";d.setAttribute("lang",l);d.setAttribute("data-lang",l);
 if(t!=="light"&&t!=="dark"){t=window.matchMedia&&window.matchMedia("(prefers-color-scheme: light)").matches?"light":"dark"}
 d.setAttribute("data-theme",t);d.className=d.className.replace("no-js","js");
-if(window.matchMedia&&matchMedia("(min-width: 1024px) and (min-height: 600px)").matches&&document.title&&true){d.classList.add("is-deck")}
+var nm=null;try{nm=localStorage.getItem("nav-mode")}catch(e){}if(nm==="v")d.classList.add("mode-v");
+if(nm!=="v"&&window.matchMedia&&matchMedia("(min-width: 1024px) and (min-height: 600px)").matches&&document.title&&true){d.classList.add("is-deck")}
 var tt=d.getAttribute("data-title-"+l);if(tt)document.title=tt;})();
 </script>
 <meta name="description" content="Ingeniero mecatrónico: automatización industrial, SCADA, PLC, IIoT con ESP32 y MQTT, y aplicaciones en Python con bases de datos y la nube." data-es-content="Ingeniero mecatrónico: automatización industrial, SCADA, PLC, IIoT con ESP32 y MQTT, y aplicaciones en Python con bases de datos y la nube." data-en-content="Mechatronics engineer: industrial automation, SCADA, PLC, IIoT with ESP32 and MQTT, and Python applications with databases and the cloud." data-i18n-attr="content">
@@ -63,6 +64,7 @@ var tt=d.getAttribute("data-title-"+l);if(tt)document.title=tt;})();
 <li><a class="nav__link" data-nav="contacto" href="#contacto"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4z"/><path d="M22 2 11 13"/></svg><span data-l="es">Contacto</span><span data-l="en" lang="en">Contact</span></a></li>
     </ul>
     <div class="nav__tools">
+      <button type="button" class="icon-btn mode-btn" data-mode-toggle aria-pressed="false" aria-label="Cambiar a navegación vertical" data-es-aria-label="Cambiar a navegación vertical" data-en-aria-label="Switch to vertical navigation" data-i18n-attr="aria-label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="5" height="14" rx="1.6"/><rect x="9.5" y="5" width="5" height="14" rx="1.6" class="mid"/><rect x="16" y="5" width="5" height="14" rx="1.6"/></svg></button>
       <div class="seg" role="group" aria-label="Idioma" data-es-aria-label="Idioma" data-en-aria-label="Language" data-i18n-attr="aria-label">
         <button type="button" data-set-lang="es" aria-pressed="true" lang="es" title="Español">ES</button>
         <button type="button" data-set-lang="en" aria-pressed="false" lang="en" title="English">EN</button>

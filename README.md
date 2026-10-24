@@ -1,38 +1,48 @@
-<div align="center">
+# magnoefren.github.io
 
-<img src="assets/img/favicon-100.png" width="72" alt="Logo">
+Portafolio personal de **Magno Efren Araujo Rodriguez**: Ingeniero Mecatrónico y Técnico en Electrónica Industrial (automatización industrial, IIoT y software en Python).
 
-# Magno Efren · Portafolio
+Sitio estático (HTML + CSS + JavaScript, sin dependencias ni compilación), listo para GitHub Pages.
 
-**Ingeniero Mecatrónico** · Automatización industrial · SCADA · IIoT · Python · Nube
+- En PC las secciones se recorren de forma horizontal (rueda del mouse, flechas ← →, botones o el menú).
+- En móvil y tablet vertical se desplazan de forma normal.
+- Datos en vivo sin claves: temperatura de Lima (Open-Meteo) y estadísticas públicas de GitHub. Si una API no responde, ese bloque simplemente no se muestra.
 
-[![Ver sitio web](https://img.shields.io/badge/Ver_sitio_web-magnoefren.github.io-07ADAD?style=for-the-badge&logo=googlechrome&logoColor=white)](https://magnoefren.github.io)
+## Estructura
 
-[![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=flat-square&logo=youtube&logoColor=white)](https://www.youtube.com/@MagnoEfren)
-[![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/MagnoEfren)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/magnoefren/)
-[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=flat-square&logo=instagram&logoColor=white)](https://www.instagram.com/magnoefren/)
-[![Correo](https://img.shields.io/badge/Correo-contacto.magnoefren@gmail.com-0F172A?style=flat-square&logo=gmail&logoColor=white)](mailto:contacto.magnoefren@gmail.com)
+```
+index.html                 Página principal (ES/EN)
+proyectos/*.html           Casos de estudio
+404.html                   Página de error personalizada
+assets/css/styles.css      Estilos, temas claro/oscuro
+assets/js/main.js          Idioma, tema, menú, animaciones, formulario
+assets/fonts/              Outfit + Instrument Serif (licencia OFL, alojadas localmente)
+assets/img/projects/       Capturas reales de proyectos (WebP)
+assets/img/og-cover.png    Imagen al compartir el enlace
+favicon.ico                Favicon
+robots.txt, sitemap.xml    SEO
+.nojekyll                  Publica los archivos tal cual (sin Jekyll)
+```
 
-</div>
+## Publicar
 
----
+1. En el repositorio `magnoefren.github.io`, elimina los archivos antiguos (`css/`, `js/`, `images/`, `index.py`, `links.html`, `_config.yml`).
+2. Copia el contenido de esta carpeta en la raíz del repositorio y haz commit + push a `main`.
+3. En **Settings → Pages**, la fuente debe ser *Deploy from a branch* → `main` / `(root)`.
 
-### Sobre este sitio
+## Idiomas
 
-Portafolio bilingüe (ES/EN) con modo claro y oscuro, navegación horizontal en PC y diseño adaptable a móvil.
-Hecho con **HTML, CSS y JavaScript** sin dependencias y publicado con **GitHub Pages**.
+Cada texto tiene sus dos versiones juntas:
 
----
+```html
+<span data-l="es">Proyectos</span><span data-l="en" lang="en">Projects</span>
+```
 
-<div align="right">
+Para atributos (alt, aria-label, placeholder) se usa `data-es-alt` / `data-en-alt` junto con `data-i18n-attr="alt"`.
+El idioma se guarda en el navegador y se puede compartir con `?lang=en`.
 
-#### ___Si desea apoyar puede hacerlo aquí:___
-#### ___Nunca es obligatorio, pero se agradece mucho.___ 😊
+## Añadir contenido
 
-<a href="https://ko-fi.com/magnoefren" target="_blank"><img src="https://img.shields.io/badge/Ko--fi-FF5E5B?style=for-the-badge&logo=kofi&logoColor=white" alt="Ko-fi"></a>
-<a href="https://www.paypal.com/paypalme/magnoefren" target="_blank"><img src="https://img.shields.io/badge/PayPal-003087?style=for-the-badge&logo=paypal&logoColor=white" alt="PayPal"></a>
-<a href="https://www.patreon.com/c/magnoefren" target="_blank"><img src="https://img.shields.io/badge/Patreon-000000?style=for-the-badge&logo=patreon&logoColor=white" alt="Patreon"></a>
-<a href="https://www.youtube.com/channel/UCBwN7Z5LWQAJ_6ueSEzDtGQ/join" target="_blank"><img src="https://img.shields.io/badge/Unirse_al_canal-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="Unirse al canal de YouTube"></a>
-
-</div>
+- **Foto de perfil:** `assets/img/foto.jpeg` (cuadrada). Para cambiarla, reemplaza ese archivo con el mismo nombre.
+- **Nuevo proyecto:** duplica un `<article class="card …">` en la sección Proyectos y, si quieres un caso de estudio, duplica una página de `proyectos/`. Agrega la nueva URL a `sitemap.xml`.
+- **Nuevo video:** duplica un `<a class="card vcard …">` y cambia el ID de YouTube en el enlace y en la miniatura (`i.ytimg.com/vi/ID/mqdefault.jpg`).

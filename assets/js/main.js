@@ -164,6 +164,8 @@
   /* ---------------- Deck horizontal ---------------- */
   var panels = [], current = 0, lock = false, deckMQ = window.matchMedia("(min-width: 1024px) and (min-height: 600px)");
   function isDeck() { return d.classList.contains("is-deck"); }
+  function modeV() { return d.classList.contains("mode-v"); }
+  function wantDeck() { return deckMQ.matches && !modeV(); }
   function indexOfId(id) { for (var i = 0; i < panels.length; i++) if (panels[i].id === id) return i; return -1; }
   function go(i, opts) {
     opts = opts || {};
@@ -214,9 +216,10 @@
     d.style.setProperty("--count", String(panels.length));
     var start = indexOfId((window.location.hash || "").slice(1));
     current = start > -1 ? start : 0;
-    enableDeck(deckMQ.matches);
+    enableDeck(wantDeck());
     observeMobile();
-    var onMQ = function () { enableDeck(deckMQ.matches); };
+    var onMQ = function () { enableDeck(wantDeck()); };
+    initModeToggle();
     if (deckMQ.addEventListener) deckMQ.addEventListener("change", onMQ); else deckMQ.addListener(onMQ);
 
     // Rueda / trackpad
@@ -263,6 +266,49 @@
       var i = indexOfId(window.location.hash.slice(1)); if (i > -1 && isDeck()) go(i, { keepHash: true });
     });
   }
+  /* ---------------- Cambio de modo: horizontal ↔ vertical ---------------- */
+  function updateModeBtn() {
+    var b = $("[data-mode-toggle]"); if (!b) return;
+    var v = modeV();
+    b.setAttribute("aria-pressed", String(v));
+    var label = L() === "en" ? (v ? "Switch to horizontal navigation" : "Switch to vertical navigation")
+                             : (v ? "Cambiar a navegación horizontal" : "Cambiar a navegación vertical");
+    b.setAttribute("aria-label", label); b.setAttribute("title", label);
+  }
+  function initModeToggle() {
+    var b = $("[data-mode-toggle]"); if (!b) return;
+    updateModeBtn();
+    document.addEventListener("langchange", updateModeBtn);
+    b.addEventListener("click", function () {
+      var toV = !modeV();
+      b.classList.add("is-pulse"); requestAnimationFrame(function () { requestAnimationFrame(function () { b.classList.remove("is-pulse"); }); });
+      var target = current;
+      if (!toV) {
+        // Desde vertical: tomar la sección visible como punto de partida
+        var best = 0, bestD = Infinity;
+        panels.forEach(function (p, k) { var dd = Math.abs(p.getBoundingClientRect().top); if (dd < bestD) { bestD = dd; best = k; } });
+        target = best;
+      }
+      var swap = function () {
+        d.classList.toggle("mode-v", toV);
+        try { localStorage.setItem("nav-mode", toV ? "v" : "h"); } catch (e) { /* noop */ }
+        current = target;
+        enableDeck(wantDeck());
+        if (toV) { panels.forEach(function (p) { p.classList.add("is-current"); }); $$(".rv").forEach(function (el) { el.classList.add("is-in"); }); window.scrollTo(0, panels[target].offsetTop); setActive(panels[target].getAttribute("data-nav-key")); }
+        updateModeBtn();
+      };
+      // Transición suave: desvanecer, cambiar y volver a mostrar
+      if (reduceMotion.matches || !document.body.animate) { swap(); return; }
+      var main = $("#main");
+      main.animate([{ opacity: 1, filter: "blur(0)" }, { opacity: 0, filter: "blur(10px)" }], { duration: 280, easing: "ease-in", fill: "forwards" }).onfinish = function () {
+        swap();
+        main.animate([{ opacity: 0, filter: "blur(10px)", transform: toV ? "translateY(24px)" : "translateX(24px)" }, { opacity: 1, filter: "blur(0)", transform: "none" }], { duration: 520, easing: "cubic-bezier(.22,.8,.24,1)", fill: "forwards" }).onfinish = function () {
+          main.getAnimations().forEach(function (a) { a.cancel(); });
+        };
+      };
+    });
+  }
+
   function observeMobile() {
     if (!("IntersectionObserver" in window)) return;
     var io = new IntersectionObserver(function (entries) {
